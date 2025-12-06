@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vglence Microservices API Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/swagger-ui-dist/swagger-ui.css" rel="stylesheet">
+</head>
+<body>
+<div id="swagger-ui"></div>
+<script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist/swagger-ui-bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist/swagger-ui-standalone-preset.js"></script>
+<script>
+    const ui = SwaggerUIBundle({
+        urls: [
+            {
+                url: 'https://xzh93yp8j1.execute-api.ap-south-1.amazonaws.com/dev/auth/public/v3/api-docs',
+                name: 'Auth Service'
+            },
+            {
+                url: 'https://xzh93yp8j1.execute-api.ap-south-1.amazonaws.com/dev/layout/public/v3/api-docs',
+                name: 'Layout Service'
+            },
+            {
+                url: 'https://xzh93yp8j1.execute-api.ap-south-1.amazonaws.com/dev/notification/public/v3/api-docs',
+                name: 'Notification Service'
+            },
+            {
+                url: 'https://xzh93yp8j1.execute-api.ap-south-1.amazonaws.com/dev/docvault/public/v3/api-docs',
+                name: 'Docvault Service'
+            }
+            // {
+            //     url: 'https://your-user-service.execute-api.ap-south-1.amazonaws.com/dev/users/v3/api-docs',
+            //     name: 'User Service'
+            // }
+        ],
+        dom_id: '#swagger-ui',
+        presets: [
+            SwaggerUIBundle.presets.apis,
+            SwaggerUIStandalonePreset
+        ],
+        layout: "StandaloneLayout"
+    });
+</script>
+</body>
+</html>
